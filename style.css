@@ -1,0 +1,45 @@
+.box-game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid black;
+  width: 600px;
+  height: 300px;
+  border-radius: 10px;
+}
+.circle {
+  height: 70px;
+  width: 70px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  transition: transform 1s;
+}
+.guy {
+  height: 70px;
+  width: 30px;
+  border: 2px solid black;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  transition: transform 1s;
+}
+
+.dd {
+  width: 50px;
+  height: 50px;
+  border: 3px solid black;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.dt {
+  width: 50px;
+  height: 50px;
+  border: 3px solid black;
+}
+/* .vvv {
+  transform: translateY(-226px);
+} */
