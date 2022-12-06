@@ -14,9 +14,13 @@ let chek;
 
 const circleChek = () => {
   chek = 1;
+  circl.style.animation = "color 4s infinite";
+  guy.style.animation = "none";
 };
 const boxChek = () => {
   chek = 2;
+  guy.style.animation = "color 4s infinite";
+  circl.style.animation = "none";
 };
 
 const jump = () => {
