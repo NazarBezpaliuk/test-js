@@ -13,23 +13,14 @@ let rightC = 0;
 let chek;
 
 const circleChek = () => {
-  const audio = new Audio();
-  audio.src = "sound.mp3";
-  audio.autoplay = true;
   chek = 1;
 };
 const boxChek = () => {
-  const audio = new Audio();
-  audio.src = "sound.mp3";
-  audio.autoplay = true;
   chek = 2;
 };
 
 const jump = () => {
   if (chek === 2) {
-    const audio = new Audio();
-    audio.src = "sound.mp3";
-    audio.autoplay = true;
     if (event.code === "ArrowRight") {
       left += pppp;
       guy.style.transform = `translate(${left}px, ${right}px)`;
@@ -44,9 +35,6 @@ const jump = () => {
       guy.style.transform = `translate(${left}px, ${right}px)`;
     }
   } else if (chek === 1) {
-    const audio = new Audio();
-    audio.src = "sound.mp3";
-    audio.autoplay = true;
     if (event.code === "ArrowRight") {
       leftC += pppp;
       circl.style.transform = `translate(${leftC}px, ${rightC}px)`;
