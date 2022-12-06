@@ -46,7 +46,7 @@ const jump = () => {
       right -= pppp;
       guy.style.transform = `translate(${left}px, ${right}px)`;
     } else if (event.code === "ArrowDown") {
-      if (right <= 0) {
+      if (right >= -20) {
         right = 0;
         guy.style.transform = `translate(${left}px, ${right}px)`;
         return;
