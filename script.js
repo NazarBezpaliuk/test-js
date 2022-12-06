@@ -31,7 +31,7 @@ const jump = () => {
       guy.style.transform = `translate(${left}px, ${right}px)`;
     } else if (event.code === "ArrowLeft") {
       if (left <= 0) {
-        left = -20;
+        left = -21;
         guy.style.transform = `translate(${left}px, ${right}px)`;
         return;
       }
@@ -47,7 +47,7 @@ const jump = () => {
       guy.style.transform = `translate(${left}px, ${right}px)`;
     } else if (event.code === "ArrowDown") {
       if (right >= -20) {
-        right = 0;
+        right = 1;
         guy.style.transform = `translate(${left}px, ${right}px)`;
         return;
       }
@@ -57,7 +57,7 @@ const jump = () => {
   } else if (chek === 1) {
     if (event.code === "ArrowRight") {
       if (leftC >= 486) {
-        leftC = 506;
+        leftC = 505;
         circl.style.transform = `translate(${leftC}px, ${rightC}px)`;
         return;
       }
@@ -81,7 +81,7 @@ const jump = () => {
       circl.style.transform = `translate(${leftC}px, ${rightC}px)`;
     } else if (event.code === "ArrowDown") {
       if (rightC >= 207) {
-        rightC = 227;
+        rightC = 226;
         circl.style.transform = `translate(${leftC}px, ${rightC}px)`;
         return;
       }
