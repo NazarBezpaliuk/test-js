@@ -5,6 +5,9 @@ const circl = document.querySelector("#circl");
 const boxB = document.querySelector("#box");
 const start = document.querySelector("#start");
 const boxA = document.querySelector("#box-box");
+const socer = document.querySelector("#socer");
+
+let num = 00;
 
 const pppp = 20;
 
@@ -37,6 +40,13 @@ const startGame = () => {
 };
 
 const circleChek = () => {
+  if (chek === 1) {
+    chek = 0;
+    circl.style.animation = "none";
+    guy.style.animation = "none";
+    boxB.classList.remove("border-animate");
+    return;
+  }
   chek = 1;
   circl.style.animation = "color 4s infinite";
   guy.style.animation = "none";
@@ -60,6 +70,12 @@ const jump = () => {
     return;
   } else if (chek === 1) {
     if (event.code === "ArrowRight") {
+      if (rightC < 0) {
+        rotateR += 40;
+        circl.style.transform = `translate(${leftC}px, ${rightC}px) rotate(${rotateR}deg)`;
+        circl.style.transition = "transform 1s";
+        return;
+      }
       if (leftC >= 486) {
         leftC = 492;
         circl.style.transform = `translate(${leftC}px, ${rightC}px) rotate(${rotateR}deg)`;
@@ -71,6 +87,12 @@ const jump = () => {
       circl.style.transform = `translate(${leftC}px, ${rightC}px) rotate(${rotateR}deg)`;
       circl.style.transition = "transform 1s";
     } else if (event.code === "ArrowLeft") {
+      if (rightC < 0) {
+        rotateR -= 40;
+        circl.style.transform = `translate(${leftC}px, ${rightC}px) rotate(${rotateR}deg)`;
+        circl.style.transition = "transform 1s";
+        return;
+      }
       if (leftC <= 0) {
         leftC = -9;
         circl.style.transform = `translate(${leftC}px, ${rightC}px) rotate(${rotateR}deg)`;
@@ -81,16 +103,28 @@ const jump = () => {
       rotateR -= 20;
       circl.style.transform = `translate(${leftC}px, ${rightC}px) rotate(${rotateR}deg)`;
       circl.style.transition = "transform 1s";
-    } else if (event.code === "ArrowUp") {
-      rightC = -50;
-      circl.style.transform = `translate(${leftC}px, ${rightC}px) rotate(${rotateR}deg)`;
-      circl.style.transition = "transform 1s";
     }
-    if ((rightC = -50)) {
-      rightC = 0;
-      circl.style.transform = `translate(${leftC}px, ${rightC}px) rotate(${rotateR}deg)`;
-      circl.style.transition = "transform 1s";
+  }
+};
+
+const jumpUp = () => {
+  if (event.code === "Space") {
+    rightC = -200;
+    circl.style.transform = `translate(${leftC}px, ${rightC}px) rotate(${rotateR}deg)`;
+    circl.style.transition = "transform 1s";
+  }
+};
+
+const jumpDown = () => {
+  if (event.code === "Space") {
+    num += 1;
+    socer.textContent = `0${num}`;
+    if (num >= 10) {
+      socer.textContent = `${num}`;
     }
+    rightC = 0;
+    circl.style.transform = `translate(${leftC}px, ${rightC}px) rotate(${rotateR}deg)`;
+    circl.style.transition = "transform 1.5s";
   }
 };
 
@@ -99,3 +133,5 @@ box.addEventListener("click", boxChek);
 window.addEventListener("keydown", jump);
 start.addEventListener("click", startGame);
 window.addEventListener("keydown", rotateBig);
+window.addEventListener("keydown", jumpUp);
+window.addEventListener("keyup", jumpDown);

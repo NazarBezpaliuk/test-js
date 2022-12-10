@@ -1,19 +1,24 @@
+body {
+  background-color: black;
+}
+
 .button_start {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 10px solid black;
+  border: 10px solid white;
+  color: white;
   padding: 40px 60px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
   font-size: 50px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.352);
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.352);
   cursor: pointer;
   transition: 300ms linear;
   &:hover {
     background-color: rgba(172, 171, 171, 0.337);
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.352);
+    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.352);
     transform: translate(-50%, -50%) scale(0.99);
   }
 }
@@ -29,6 +34,7 @@
   animation: rotate 2s infinite;
   overflow: hidden;
   transition: 300ms linear;
+  box-shadow: 0px 0px 20px 3px rgba(255, 255, 255, 0.452);
   // &_start {
   //   transform: translate(-50%, -50%) scaleY(1) rotate(10deg);
   // }
@@ -55,6 +61,7 @@
   width: 100%;
   background-color: rgb(234, 255, 0);
   height: 10px;
+  box-shadow: 0px 0px 20px 3px rgba(234, 255, 0, 0.41);
 }
 .bor2 {
   position: absolute;
@@ -62,22 +69,25 @@
   width: 10px;
   background-color: rgb(234, 255, 0);
   height: 10px;
+  box-shadow: 0px 0px 20px 3px rgba(234, 255, 0, 0.41);
 }
 .bor3 {
   position: absolute;
   top: 0;
   right: 0;
   width: 10%;
-  background-color: rgb(204, 51, 51);
+  background-color: rgb(255, 0, 247);
   height: 10px;
+  box-shadow: 0px 0px 20px 3px rgba(255, 0, 247, 0.401);
 }
 .bor4 {
   position: absolute;
   top: 0;
   right: 0;
   width: 10px;
-  background-color: rgb(204, 51, 51);
+  background-color: rgb(255, 0, 247);
   height: 100%;
+  box-shadow: 0px 0px 20px 3px rgba(255, 0, 247, 0.401);
 }
 .bor5 {
   position: absolute;
@@ -85,6 +95,7 @@
   width: 10%;
   background-color: rgb(17, 255, 0);
   height: 10px;
+  box-shadow: 0px 0px 20px 3px rgba(17, 255, 0, 0.416);
 }
 .bor6 {
   position: absolute;
@@ -92,22 +103,25 @@
   width: 10px;
   background-color: rgb(17, 255, 0);
   height: 100%;
+  box-shadow: 0px 0px 20px 3px rgba(17, 255, 0, 0.416);
 }
 .bor7 {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 100%;
-  background-color: rgb(51, 138, 204);
+  background-color: rgb(0, 255, 247);
   height: 10px;
+  box-shadow: 0px 0px 20px 3px rgba(0, 255, 247, 0.393);
 }
 .bor8 {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 10px;
-  background-color: rgb(51, 138, 204);
+  background-color: rgb(0, 255, 247);
   height: 10px;
+  box-shadow: 0px 0px 20px 3px rgba(0, 255, 247, 0.393);
 }
 @keyframes border-b {
   0% {
@@ -178,12 +192,15 @@
 @keyframes color {
   0% {
     background-color: rgb(238, 255, 0);
+    box-shadow: 0px 0px 20px 3px rgba(238, 255, 0, 0.362);
   }
   50% {
     background-color: rgb(255, 246, 127);
+    box-shadow: 0px 0px 20px 3px rgba(255, 246, 127, 0.51);
   }
   100% {
     background-color: rgb(238, 255, 0);
+    box-shadow: 0px 0px 20px 3px rgba(238, 255, 0, 0.362);
   }
 }
 .glass {
@@ -235,23 +252,36 @@
 }
 
 .dd {
-  width: 50px;
-  height: 50px;
-  border: 3px solid black;
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
   border-radius: 50%;
   margin-bottom: 20px;
+  background-color: red;
+  box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: box-shadow 300ms linear;
+  &:hover {
+    box-shadow: inset 0px 0px 15px 15px rgba(0, 0, 0, 0.556),
+      0px 0px 10px 5px red;
+  }
 }
 .dt {
   width: 50px;
   height: 50px;
   border: 3px solid black;
+  opacity: 0;
 }
 /* .vvv {
   transform: translateY(-226px);
 } */
 .bg {
   animation: slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  background-image: linear-gradient(
+    -60deg,
+    rgb(0, 0, 0) 50%,
+    rgb(28, 28, 28) 50%
+  );
   bottom: 0;
   left: -50%;
   opacity: 0.5;
@@ -276,4 +306,15 @@
   100% {
     transform: translateX(25%);
   }
+}
+
+#socer {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 70px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -400%);
+  color: white;
 }

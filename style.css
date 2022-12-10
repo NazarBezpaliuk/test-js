@@ -1,20 +1,25 @@
+body {
+  background-color: black;
+}
+
 .button_start {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 10px solid black;
+  border: 10px solid white;
+  color: white;
   padding: 40px 60px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
   font-size: 50px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.352);
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.352);
   cursor: pointer;
   transition: 300ms linear;
 }
 .button_start:hover {
   background-color: rgba(172, 171, 171, 0.337);
-  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.352);
+  box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.352);
   transform: translate(-50%, -50%) scale(0.99);
 }
 
@@ -31,6 +36,7 @@
           animation: rotate 2s infinite;
   overflow: hidden;
   transition: 300ms linear;
+  box-shadow: 0px 0px 20px 3px rgba(255, 255, 255, 0.452);
 }
 .box-game.border-animate .bor1, .box-game.border-animate .bor7 {
   -webkit-animation: border 2s infinite;
@@ -55,6 +61,7 @@
   width: 100%;
   background-color: rgb(234, 255, 0);
   height: 10px;
+  box-shadow: 0px 0px 20px 3px rgba(234, 255, 0, 0.41);
 }
 
 .bor2 {
@@ -63,6 +70,7 @@
   width: 10px;
   background-color: rgb(234, 255, 0);
   height: 10px;
+  box-shadow: 0px 0px 20px 3px rgba(234, 255, 0, 0.41);
 }
 
 .bor3 {
@@ -70,8 +78,9 @@
   top: 0;
   right: 0;
   width: 10%;
-  background-color: rgb(204, 51, 51);
+  background-color: rgb(255, 0, 247);
   height: 10px;
+  box-shadow: 0px 0px 20px 3px rgba(255, 0, 247, 0.401);
 }
 
 .bor4 {
@@ -79,8 +88,9 @@
   top: 0;
   right: 0;
   width: 10px;
-  background-color: rgb(204, 51, 51);
+  background-color: rgb(255, 0, 247);
   height: 100%;
+  box-shadow: 0px 0px 20px 3px rgba(255, 0, 247, 0.401);
 }
 
 .bor5 {
@@ -89,6 +99,7 @@
   width: 10%;
   background-color: rgb(17, 255, 0);
   height: 10px;
+  box-shadow: 0px 0px 20px 3px rgba(17, 255, 0, 0.416);
 }
 
 .bor6 {
@@ -97,6 +108,7 @@
   width: 10px;
   background-color: rgb(17, 255, 0);
   height: 100%;
+  box-shadow: 0px 0px 20px 3px rgba(17, 255, 0, 0.416);
 }
 
 .bor7 {
@@ -104,8 +116,9 @@
   bottom: 0;
   right: 0;
   width: 100%;
-  background-color: rgb(51, 138, 204);
+  background-color: rgb(0, 255, 247);
   height: 10px;
+  box-shadow: 0px 0px 20px 3px rgba(0, 255, 247, 0.393);
 }
 
 .bor8 {
@@ -113,8 +126,9 @@
   bottom: 0;
   right: 0;
   width: 10px;
-  background-color: rgb(51, 138, 204);
+  background-color: rgb(0, 255, 247);
   height: 10px;
+  box-shadow: 0px 0px 20px 3px rgba(0, 255, 247, 0.393);
 }
 
 @-webkit-keyframes border-b {
@@ -243,24 +257,30 @@
 @-webkit-keyframes color {
   0% {
     background-color: rgb(238, 255, 0);
+    box-shadow: 0px 0px 20px 3px rgba(238, 255, 0, 0.362);
   }
   50% {
     background-color: rgb(255, 246, 127);
+    box-shadow: 0px 0px 20px 3px rgba(255, 246, 127, 0.51);
   }
   100% {
     background-color: rgb(238, 255, 0);
+    box-shadow: 0px 0px 20px 3px rgba(238, 255, 0, 0.362);
   }
 }
 
 @keyframes color {
   0% {
     background-color: rgb(238, 255, 0);
+    box-shadow: 0px 0px 20px 3px rgba(238, 255, 0, 0.362);
   }
   50% {
     background-color: rgb(255, 246, 127);
+    box-shadow: 0px 0px 20px 3px rgba(255, 246, 127, 0.51);
   }
   100% {
     background-color: rgb(238, 255, 0);
+    box-shadow: 0px 0px 20px 3px rgba(238, 255, 0, 0.362);
   }
 }
 .glass {
@@ -313,17 +333,25 @@
 }
 
 .dd {
-  width: 50px;
-  height: 50px;
-  border: 3px solid black;
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
   border-radius: 50%;
   margin-bottom: 20px;
+  background-color: red;
+  box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: box-shadow 300ms linear;
+}
+.dd:hover {
+  box-shadow: inset 0px 0px 15px 15px rgba(0, 0, 0, 0.556), 0px 0px 10px 5px red;
 }
 
 .dt {
   width: 50px;
   height: 50px;
   border: 3px solid black;
+  opacity: 0;
 }
 
 /* .vvv {
@@ -332,7 +360,7 @@
 .bg {
   -webkit-animation: slide 3s ease-in-out infinite alternate;
           animation: slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  background-image: linear-gradient(-60deg, rgb(0, 0, 0) 50%, rgb(28, 28, 28) 50%);
   bottom: 0;
   left: -50%;
   opacity: 0.5;
@@ -369,4 +397,14 @@
   100% {
     transform: translateX(25%);
   }
+}
+#socer {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 70px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -400%);
+  color: white;
 }/*# sourceMappingURL=style.css.map */
