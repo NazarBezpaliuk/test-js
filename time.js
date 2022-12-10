@@ -1,16 +1,35 @@
-const hours = document.querySelector("#hours");
-const minute = document.querySelector("#minute");
-const second = document.querySelector("#second");
-
-let secondTime = 00;
-let minuteTime = 00;
-let hoursTime = 00;
-
-const timer = () => {
-    hours.textContent = `${hoursTime}`;
-    minute.textContent = `${minuteTime}`;
-    second.textContent = `${secondTime}`;
-    for (let i = 0; i <= 60; i += 1) {
-        
-    }
-}
+// else if (chek === 2) {
+//     if (event.code === "ArrowRight") {
+//       if (left >= 506) {
+//         left = 532;
+//         guy.style.transform = `translate(${left}px, ${right}px)`;
+//         return;
+//       }
+//       left += pppp;
+//       guy.style.transform = `translate(${left}px, ${right}px)`;
+//     } else if (event.code === "ArrowLeft") {
+//       if (left <= 0) {
+//         left = -9.5;
+//         guy.style.transform = `translate(${left}px, ${right}px)`;
+//         return;
+//       }
+//       left -= pppp;
+//       guy.style.transform = `translate(${left}px, ${right}px)`;
+//     } else if (event.code === "ArrowUp") {
+//       if (right <= -196) {
+//         right = -202;
+//         guy.style.transform = `translate(${left}px, ${right}px)`;
+//         return;
+//       }
+//       right -= pppp;
+//       guy.style.transform = `translate(${left}px, ${right}px)`;
+//     } else if (event.code === "ArrowDown") {
+//       if (right >= -20) {
+//         right = 0;
+//         guy.style.transform = `translate(${left}px, ${right}px)`;
+//         return;
+//       }
+//       right += pppp;
+//       guy.style.transform = `translate(${left}px, ${right}px)`;
+//     }
+//   }
